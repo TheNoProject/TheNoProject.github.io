@@ -145,20 +145,16 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
-        .image-placeholder {
+        /* Modernized Team Image Styling */
+        .member-image {
             width: 100%;
-            height: 220px;
-            background-color: #1e293b;
+            height: 240px;
+            object-fit: cover; /* Prevents stretching, crops cleanly like a corporate profile */
+            object-position: center;
             border-radius: 12px;
             margin-bottom: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            border: 1px dashed var(--border-subtle);
+            border: 1px solid var(--border-subtle);
+            background-color: #1e293b; /* Fallback color while image loads */
         }
 
         .member-name {
@@ -237,7 +233,7 @@
             
             <div class="team-grid">
                 <div class="team-card">
-                    <div class="image-placeholder">Image Asset To Be Added</div>
+                    <img src="matthew.jpg" alt="MatthewGotLost" class="member-image">
                     <div class="member-name">MatthewGotLost</div>
                     <div class="member-role">Founder</div>
                     <div class="member-desc">
@@ -250,7 +246,7 @@
                 </div>
 
                 <div class="team-card">
-                    <div class="image-placeholder">Image Asset To Be Added</div>
+                    <img src="dino.jpg" alt="Dino" class="member-image">
                     <div class="member-name">Dino (aka on15ms. On discord)</div>
                     <div class="member-role">Co Founder & Lead Developer</div>
                     <div class="member-desc">
