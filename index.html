@@ -1,1 +1,262 @@
-coming soon...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The No Project</title>
+    <style>
+        /* Modern Corporate Design System */
+        :root {
+            --bg-primary: #0f172a; /* Deep slate corporate background */
+            --bg-secondary: #1e293b; /* Lighter slate for cards/sections */
+            --accent-blue: #38bdf8; /* Modern tech accent blue */
+            --text-main: #f8fafc; /* Crisp white for primary text */
+            --text-muted: #94a3b8; /* Muted gray for body text */
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        /* Navigation / Header styling */
+        header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Home Section */
+        #home {
+            padding: 100px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+        }
+
+        #home .project-title {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ffffff, var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #home h1 {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            border: 1px solid var(--border-color);
+            padding: 8px 20px;
+            border-radius: 50px;
+            background-color: rgba(51, 65, 85, 0.3);
+        }
+
+        /* Team Section */
+        #team {
+            padding: 80px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--accent-blue);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .team-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: var(--accent-blue);
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            font-size: 1rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .member-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .member-socials {
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .socials-label {
+            font-weight: 600;
+            color: var(--text-main);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            margin-top: 40px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">The No Project</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#team">Team</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="project-title">The No Project</div>
+            <h1>Founded By MatthewGotLost (discord)</h1>
+        </section>
+
+        <section id="team">
+            <h2 class="section-title">Team</h2>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="image-placeholder">Image Asset To Be Added</div>
+                    <div class="member-name">MatthewGotLost</div>
+                    <div class="member-role">Founder</div>
+                    <div class="member-desc">
+                        MatthewGotLost founded The No Project as MMgames9292 but he lost access to the account and switched to MatthewGotLost. The No Project started as something Matthew would do for fun in his free time because he was bored. He decided to go to his friend, Dino, and tell him about the project to which Dino joined The No Project and became the Co Founder & Lead Developer in the project.
+                    </div>
+                    <div class="member-socials">
+                        <span class="socials-label">Contact & Socials</span>
+                        To be added soon…
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="image-placeholder">Image Asset To Be Added</div>
+                    <div class="member-name">Dino (aka on15ms. On discord)</div>
+                    <div class="member-role">Co Founder & Lead Developer</div>
+                    <div class="member-desc">
+                        Dino is a friend of MatthewGotLost. He was contacted by Matthew and became the Co Founder & Lead Developer on the project. Ever since then, he has done a lot for The No Project. He compiled the code into an exe when it was batch code (Matthew compiled the python code to exe in later versions). He also developed the 2026 version of the “No” discord bot and hosted it himself. He has helped develop many No Batch & Python versions.
+                    </div>
+                    <div class="member-socials">
+                        <span class="socials-label">Contact & Socials</span>
+                        To be added soon…
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        More sections will be added soon…
+    </footer>
+
+</body>
+</html>
